@@ -1,0 +1,732 @@
+Test suite doctests: RUNNING...
+src/Lets/StoreLens.hs:107: failure in expression `get fstL (0 :: Int, "abc")'
+expected: 0
+ but got: *** Exception: todo: fstL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:275:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:113: failure in expression `let types = (x :: Int, y :: String) in get fstL (x, y) == x'
+
+<interactive>:68:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:115: failure in expression `let types = (x :: Int, y :: String) in get sndL (x, y) == y'
+
+<interactive>:93:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:125: failure in expression `set fstL (0 :: Int, "abc") 1'
+expected: (1,"abc")
+ but got: *** Exception: todo: fstL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:275:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:131: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (z, y)'
+
+<interactive>:132:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:133: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (x, z)'
+
+<interactive>:157:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:176: failure in expression `modify fstL (+1) (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: fstL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:275:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:182: failure in expression `let types = (x :: Int, y :: String) in modify fstL id (x, y) == (x, y)'
+
+<interactive>:196:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:184: failure in expression `let types = (x :: Int, y :: String) in modify sndL id (x, y) == (x, y)'
+
+<interactive>:221:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:206: failure in expression `fstL .~ 1 $ (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: fstL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:275:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:212: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (fstL .~ z $ (x, y))'
+
+<interactive>:260:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:214: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (sndL .~ z $ (x, y))'
+
+<interactive>:285:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:227: failure in expression `fmodify fstL (+) (5 :: Int, "abc") 8'
+expected: (13,"abc")
+ but got: *** Exception: todo: fmodify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:242:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:246: failure in expression `fstL |= Just 3 $ (7, "abc")'
+expected: Just (3,"abc")
+ but got: *** Exception: todo: (|=)
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:258:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:264: failure in expression `modify fstL (*10) (3, "abc")'
+expected: (30,"abc")
+ but got: *** Exception: todo: fstL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:275:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:267: failure in expression `let types = (x :: Int, y :: String) in getsetLaw fstL (x, y)'
+
+<interactive>:352:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:269: failure in expression `let types = (x :: Int, y :: String) in setgetLaw fstL (x, y) z'
+
+<interactive>:377:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:271: failure in expression `let types = (x :: Int, y :: String) in setsetLaw fstL (x, y) z'
+
+<interactive>:402:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:279: failure in expression `modify sndL (++ "def") (13, "abc")'
+expected: (13,"abcdef")
+ but got: *** Exception: todo: sndL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:290:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:282: failure in expression `let types = (x :: Int, y :: String) in getsetLaw sndL (x, y)'
+
+<interactive>:441:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:284: failure in expression `let types = (x :: Int, y :: String) in setgetLaw sndL (x, y) z'
+
+<interactive>:466:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:286: failure in expression `let types = (x :: Int, y :: String) in setsetLaw sndL (x, y) z'
+
+<interactive>:491:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/StoreLens.hs:294: failure in expression `get (mapL 3) (Map.fromList (map (\c -> (ord c - 96, c)) ['a'..'d']))'
+expected: Just 'c'
+ but got: *** Exception: todo: mapL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:316:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:320: failure in expression `get (setL 3) (Set.fromList [1..5])'
+expected: True
+ but got: *** Exception: todo: setL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:342:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:346: failure in expression `get (compose fstL sndL) ("abc", (7, "def"))'
+expected: 7
+ but got: *** Exception: todo: compose
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:356:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:370: failure in expression `get identity 3'
+expected: 3
+ but got: *** Exception: todo: identity
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:378:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:382: failure in expression `get (product fstL sndL) (("abc", 3), (4, "def"))'
+expected: ("abc","def")
+ but got: *** Exception: todo: product
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:392:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:406: failure in expression `get (choice fstL sndL) (Left ("abc", 7))'
+expected: "abc"
+ but got: "*** Exception: todo: choice
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:422:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:501: failure in expression `getSuburb fred'
+expected: "Fredville"
+ but got: "*** Exception: todo: getSuburb
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:510:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:514: failure in expression `setStreet fred "Some Other St"'
+expected: Person 24 "Fred" (Address "Some Other St" "Fredville" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setStreet
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:524:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:528: failure in expression `getAgeAndCountry (fred, maryLocality)'
+expected: (24,"Maristan")
+ but got: *** Exception: todo: getAgeAndCountry
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:537:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:541: failure in expression `setCityAndLocality (fred, maryAddress) ("Some Other City", fredLocality)'
+expected: (Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "Some Other City" "New South Fred" "Fredalia")),Address "83 Mary Ln" "Maryland" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setCityAndLocality
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:549:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:553: failure in expression `getSuburbOrCity (Left maryAddress)'
+expected: "Maryland"
+ but got: "*** Exception: todo: getSuburbOrCity
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:562:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:566: failure in expression `setStreetOrState (Right maryLocality) "Some Other State"'
+expected: Right (Locality "Mary Mary" "Some Other State" "Maristan")
+ but got: *** Exception: todo: setStreetOrState
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:576:3 in main:Lets.StoreLens
+
+src/Lets/StoreLens.hs:580: failure in expression `modifyCityUppercase fred'
+expected: Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "FREDMANIA" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: modifyCityUppercase
+          CallStack (from HasCallStack):
+            error, called at src/Lets/StoreLens.hs:589:3 in main:Lets.StoreLens
+
+src/Lets/Lens.hs:334: failure in expression `modify fstL (+1) (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:349:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:340: failure in expression `let types = (x :: Int, y :: String) in modify fstL id (x, y) == (x, y)'
+
+<interactive>:724:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/Lens.hs:342: failure in expression `let types = (x :: Int, y :: String) in modify sndL id (x, y) == (x, y)'
+
+<interactive>:749:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/Lens.hs:364: failure in expression `fstL .~ 1 $ (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: (.~)
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:379:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:370: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (fstL .~ z $ (x, y))'
+
+<interactive>:788:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/Lens.hs:372: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (sndL .~ z $ (x, y))'
+
+<interactive>:813:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/Lens.hs:385: failure in expression `fmodify fstL (+) (5 :: Int, "abc") 8'
+expected: (13,"abc")
+ but got: *** Exception: todo: fmodify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:400:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:404: failure in expression `fstL |= Just 3 $ (7, "abc")'
+expected: Just (3,"abc")
+ but got: *** Exception: todo: (|=)
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:416:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:422: failure in expression `modify fstL (*10) (3, "abc")'
+expected: (30,"abc")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:349:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:431: failure in expression `modify sndL (++ "def") (13, "abc")'
+expected: (13,"abcdef")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:349:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:445: failure in expression `get (mapL 3) (Map.fromList (map (\c -> (ord c - 96, c)) ['a'..'d']))'
+expected: Just 'c'
+ but got: *** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:476: failure in expression `get (setL 3) (Set.fromList [1..5])'
+expected: True
+ but got: *** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:502: failure in expression `get (compose fstL sndL) ("abc", (7, "def"))'
+expected: 7
+ but got: *** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:526: failure in expression `get identity 3'
+expected: 3
+ but got: *** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:538: failure in expression `get (product fstL sndL) (("abc", 3), (4, "def"))'
+expected: ("abc","def")
+ but got: *** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:562: failure in expression `get (choice fstL sndL) (Left ("abc", 7))'
+expected: "abc"
+ but got: "*** Exception: todo: get
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:230:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:653: failure in expression `getSuburb fred'
+expected: "Fredville"
+ but got: "*** Exception: todo: getSuburb
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:662:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:666: failure in expression `setStreet fred "Some Other St"'
+expected: Person 24 "Fred" (Address "Some Other St" "Fredville" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setStreet
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:676:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:680: failure in expression `getAgeAndCountry (fred, maryLocality)'
+expected: (24,"Maristan")
+ but got: *** Exception: todo: getAgeAndCountry
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:689:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:693: failure in expression `setCityAndLocality (fred, maryAddress) ("Some Other City", fredLocality)'
+expected: (Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "Some Other City" "New South Fred" "Fredalia")),Address "83 Mary Ln" "Maryland" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setCityAndLocality
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:701:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:705: failure in expression `getSuburbOrCity (Left maryAddress)'
+expected: "Maryland"
+ but got: "*** Exception: todo: getSuburbOrCity
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:714:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:718: failure in expression `setStreetOrState (Right maryLocality) "Some Other State"'
+expected: Right (Locality "Mary Mary" "Some Other State" "Maristan")
+ but got: *** Exception: todo: setStreetOrState
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:728:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:732: failure in expression `modifyCityUppercase fred'
+expected: Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "FREDMANIA" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: modifyCityUppercase
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:741:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:745: failure in expression `modifyIntAndLengthEven (IntAnd 10 "abc")'
+expected: IntAnd 10 False
+ but got: *** Exception: todo: modifyIntAndLengthEven
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:754:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:760: failure in expression `over traverseLocality (map toUpper) (Locality "abc" "def" "ghi")'
+expected: Locality "ABC" "DEF" "GHI"
+ but got: *** Exception: todo: over
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:123:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:769: failure in expression `over intOrIntP (*10) (IntOrIs 3)'
+expected: IntOrIs 30
+ but got: *** Exception: todo: over
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:123:3 in main:Lets.Lens
+
+src/Lets/Lens.hs:789: failure in expression `over intOrP (even . length) (IntOrIsNot "abcd")'
+expected: IntOrIsNot True
+ but got: *** Exception: todo: over
+          CallStack (from HasCallStack):
+            error, called at src/Lets/Lens.hs:123:3 in main:Lets.Lens
+
+src/Lets/OpticPolyLens.hs:112: failure in expression `modify fstL (+1) (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:127:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:118: failure in expression `let types = (x :: Int, y :: String) in modify fstL id (x, y) == (x, y)'
+
+<interactive>:1158:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:120: failure in expression `let types = (x :: Int, y :: String) in modify sndL id (x, y) == (x, y)'
+
+<interactive>:1183:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:142: failure in expression `fstL .~ 1 $ (0 :: Int, "abc")'
+expected: (1,"abc")
+ but got: *** Exception: todo: (.~)
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:157:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:148: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (fstL .~ z $ (x, y))'
+
+<interactive>:1222:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:150: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (sndL .~ z $ (x, y))'
+
+<interactive>:1247:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:163: failure in expression `fmodify fstL (+) (5 :: Int, "abc") 8'
+expected: (13,"abc")
+ but got: *** Exception: todo: fmodify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:178:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:182: failure in expression `fstL |= Just 3 $ (7, "abc")'
+expected: Just (3,"abc")
+ but got: *** Exception: todo: (|=)
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:194:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:200: failure in expression `modify fstL (*10) (3, "abc")'
+expected: (30,"abc")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:127:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:203: failure in expression `let types = (x :: Int, y :: String) in getsetLaw fstL (x, y)'
+
+<interactive>:1314:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:205: failure in expression `let types = (x :: Int, y :: String) in setgetLaw fstL (x, y) z'
+
+<interactive>:1339:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:207: failure in expression `let types = (x :: Int, y :: String) in setsetLaw fstL (x, y) z'
+
+<interactive>:1364:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:215: failure in expression `modify sndL (++ "def") (13, "abc")'
+expected: (13,"abcdef")
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:127:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:218: failure in expression `let types = (x :: Int, y :: String) in getsetLaw sndL (x, y)'
+
+<interactive>:1403:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:220: failure in expression `let types = (x :: Int, y :: String) in setgetLaw sndL (x, y) z'
+
+<interactive>:1428:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:222: failure in expression `let types = (x :: Int, y :: String) in setsetLaw sndL (x, y) z'
+
+<interactive>:1453:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/OpticPolyLens.hs:230: failure in expression `get (mapL 3) (Map.fromList (map (\c -> (ord c - 96, c)) ['a'..'d']))'
+expected: Just 'c'
+ but got: *** Exception: todo: mapL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:252:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:256: failure in expression `get (setL 3) (Set.fromList [1..5])'
+expected: True
+ but got: *** Exception: todo: setL
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:278:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:282: failure in expression `get (compose fstL sndL) ("abc", (7, "def"))'
+expected: 7
+ but got: *** Exception: todo: compose
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:292:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:306: failure in expression `get identity 3'
+expected: 3
+ but got: *** Exception: todo: identity
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:314:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:318: failure in expression `get (product fstL sndL) (("abc", 3), (4, "def"))'
+expected: ("abc","def")
+ but got: *** Exception: todo: product
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:328:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:342: failure in expression `get (choice fstL sndL) (Left ("abc", 7))'
+expected: "abc"
+ but got: "*** Exception: todo: choice
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:358:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:444: failure in expression `getSuburb fred'
+expected: "Fredville"
+ but got: "*** Exception: todo: getSuburb
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:453:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:458: failure in expression `setStreet fred "Some Other St"'
+expected: Person 24 "Fred" (Address "Some Other St" "Fredville" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setStreet
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:468:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:472: failure in expression `getAgeAndCountry (fred, maryLocality)'
+expected: (24,"Maristan")
+ but got: *** Exception: todo: getAgeAndCountry
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:481:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:485: failure in expression `setCityAndLocality (fred, maryAddress) ("Some Other City", fredLocality)'
+expected: (Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "Some Other City" "New South Fred" "Fredalia")),Address "83 Mary Ln" "Maryland" (Locality "Fredmania" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: setCityAndLocality
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:493:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:497: failure in expression `getSuburbOrCity (Left maryAddress)'
+expected: "Maryland"
+ but got: "*** Exception: todo: choice
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:358:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:510: failure in expression `setStreetOrState (Right maryLocality) "Some Other State"'
+expected: Right (Locality "Mary Mary" "Some Other State" "Maristan")
+ but got: *** Exception: todo: choice
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:358:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:524: failure in expression `modifyCityUppercase fred'
+expected: Person 24 "Fred" (Address "15 Fred St" "Fredville" (Locality "FREDMANIA" "New South Fred" "Fredalia"))
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:127:3 in main:Lets.OpticPolyLens
+
+src/Lets/OpticPolyLens.hs:537: failure in expression `modify intAndL (even . length) (IntAnd 10 "abc")'
+expected: IntAnd 10 False
+ but got: *** Exception: todo: modify
+          CallStack (from HasCallStack):
+            error, called at src/Lets/OpticPolyLens.hs:127:3 in main:Lets.OpticPolyLens
+
+src/Lets/GetSetLens.hs:68: failure in expression `let types = (x :: Int, y :: String) in get fstL (x, y) == x'
+
+<interactive>:1702:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:70: failure in expression `let types = (x :: Int, y :: String) in get sndL (x, y) == y'
+
+<interactive>:1727:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:86: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (z, y)'
+
+<interactive>:1768:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:88: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (x, z)'
+
+<interactive>:1793:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:137: failure in expression `let types = (x :: Int, y :: String) in modify fstL id (x, y) == (x, y)'
+
+<interactive>:1834:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:139: failure in expression `let types = (x :: Int, y :: String) in modify sndL id (x, y) == (x, y)'
+
+<interactive>:1859:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:168: failure in expression `let types = (x :: Int, y :: String) in set fstL (x, y) z == (fstL .~ z $ (x, y))'
+
+<interactive>:1900:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:170: failure in expression `let types = (x :: Int, y :: String) in set sndL (x, y) z == (sndL .~ z $ (x, y))'
+
+<interactive>:1925:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:220: failure in expression `let types = (x :: Int, y :: String) in getsetLaw fstL (x, y)'
+
+<interactive>:1998:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:222: failure in expression `let types = (x :: Int, y :: String) in setgetLaw fstL (x, y) z'
+
+<interactive>:2023:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:224: failure in expression `let types = (x :: Int, y :: String) in setsetLaw fstL (x, y) z'
+
+<interactive>:2048:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:234: failure in expression `let types = (x :: Int, y :: String) in getsetLaw sndL (x, y)'
+
+<interactive>:2087:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:236: failure in expression `let types = (x :: Int, y :: String) in setgetLaw sndL (x, y) z'
+
+<interactive>:2112:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:238: failure in expression `let types = (x :: Int, y :: String) in setsetLaw sndL (x, y) z'
+
+<interactive>:2137:3: error:
+    Variable not in scope:
+      polyQuickCheck
+        :: Language.Haskell.TH.Syntax.Name
+           -> Language.Haskell.TH.Lib.Internal.ExpQ
+
+src/Lets/GetSetLens.hs:257: failure in expression `set (mapL 3) (Map.fromList (map (\c -> (ord c - 96, c)) ['a'..'d'])) Nothing'
+expected: fromList [(1,'a'),(2,'b'),(4,'d')]
+ but got: fromList [(1,'a'),(2,'b'),(3,'c'),(4,'d')]
+
+src/Lets/GetSetLens.hs:279: failure in expression `set (setL 3) (Set.fromList [1..5]) False'
+expected: fromList [1,2,4,5]
+ but got: fromList [1,2,3,4,5]
+
+Examples: 263  Tried: 170  Errors: 0  Failures: 108
+Test suite doctests: FAIL
+Test suite logged to: /home/jm0x5c/oquant/lets-lens/dist-newstyle/build/x86_64-linux/ghc-8.6.3/lets-lens-0.0.1/t/doctests/test/lets-lens-0.0.1-doctests.log
